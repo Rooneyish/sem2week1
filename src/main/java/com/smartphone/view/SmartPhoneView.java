@@ -8,8 +8,19 @@ public class SmartPhoneView {
 		Scanner input = new Scanner(System.in);
 		
 		SmartPhoneController smartphoneList = new SmartPhoneController();
-		//smartphoneList.phoneDetails();
-		smartphoneList.addPhone();
-		smartphoneList.display();
+		
+		while(true) {
+			System.out.print("Add Smartphone? (y/n) ");
+			String value = input.next();
+			
+			switch(value) {
+				case "y":
+					smartphoneList.addPhone();
+					smartphoneList.display();
+				case "n":
+					break;
+			}
+			
+		}
 	}
 }

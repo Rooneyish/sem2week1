@@ -13,6 +13,7 @@ public class SmartPhoneController {
 		
 		System.out.print("Enter id of the product: ");
 		int id = input.nextInt();
+		input.nextLine();
 		
 		System.out.println("Enter name of the product: ");
 		String name = input.nextLine();
@@ -36,7 +37,11 @@ public class SmartPhoneController {
 
 	public void display() {
 		for(SmartPhoneModel item: smartphoneList) {
-			System.out.print(item.getId() + item.getName() + item.getBrand() + item.getColor() + item.getPrice());
+			System.out.println("Id: "+ item.getId());
+			System.out.println("Name: "+ item.getName());
+			System.out.println("Brand: "+ item.getBrand());
+			System.out.println("Color: "+ item.getColor());
+			System.out.println("Price: "+ item.getPrice());
 		}
 	}
 	
