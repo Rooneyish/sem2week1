@@ -26,6 +26,9 @@ public class SmartPhoneView {
 				case "2":
 					smartphoneList.removePhone();
 					break;
+				case "3":
+					smartphoneList.updatePhone();
+					break;
 				case "4":
 					smartphoneList.displayOption();
 					break;

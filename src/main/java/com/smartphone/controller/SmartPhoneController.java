@@ -55,6 +55,72 @@ public class SmartPhoneController {
 		}
 	}
 	
+	public void updatePhone() {
+		System.out.print("Enter Model of the phone to remove: ");
+		String model = input.next();
+		input.nextLine();
+		
+		do {
+			System.out.println("Enter the number that corresponds to the phone property: ");
+			System.out.println("1 - Processor");
+			System.out.println("2 - Ram");
+			System.out.println("3 - Storage");
+			System.out.println("4 - Price");
+			System.out.println("5 - Exit");
+			System.out.print("Enter here: ");
+			String property= input.next();
+			input.nextLine();
+			switch(property) {
+			case "1":
+				System.out.print("New Processor: ");
+				String newProcessor = input.next();
+				input.nextLine();
+				for(SmartPhoneModel item: smartphoneList) {
+					if(item.getModel().equalsIgnoreCase(model)) {
+						item.setProcessor(newProcessor);
+						return;
+					}
+				}
+			case "2":
+				System.out.print("New Ram: ");
+				int newRam = input.nextInt();
+				input.nextLine();
+				for(SmartPhoneModel item: smartphoneList) {
+					if(item.getModel().equalsIgnoreCase(model)) {
+						item.setRam(newRam);
+						return;
+					}
+				}
+			case "3":
+				System.out.print("New Storage: ");
+				int newStorage= input.nextInt();
+				input.nextLine();
+				for(SmartPhoneModel item: smartphoneList) {
+					if(item.getModel().equalsIgnoreCase(model)) {
+						item.setStorage(newStorage);
+						return;
+					}
+				}
+			case "4":
+				System.out.print("New Price: ");
+				float newPrice = input.nextFloat();
+				input.nextLine();
+				for(SmartPhoneModel item: smartphoneList) {
+					if(item.getModel().equalsIgnoreCase(model)) {
+						item.setPrice(newPrice);
+						return;
+					}
+				}
+			case "5":
+				return;
+			default:
+				System.out.print("Can't find property. ");
+			}
+		}
+		while(true);
+	}
+	
+	
 	public void displayOption() {
 		do {
 			System.out.println("1 - Display All");

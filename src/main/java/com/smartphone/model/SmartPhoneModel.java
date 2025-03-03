@@ -46,7 +46,7 @@ public class SmartPhoneModel {
 		this.brand=brand;
 	}
 	
-	public void setProcessort(String processor) {
+	public void setProcessor(String processor) {
 		this.processor= processor;	
 	}
 	
